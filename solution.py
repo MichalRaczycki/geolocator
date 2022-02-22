@@ -18,7 +18,7 @@ for x in sorted(raw_point_coords.items(),key = lambda x :x[0]):
 print (len(coordinate_dict.items()))
 current_point = 1
 for point,coords in coordinate_dict.items():
-    for x in range(len(coordinate_dict.items()))+1:
+    for x in range(len(coordinate_dict.items())+1):
         print(f'point:{point}, coords:{coords}, x:{x}')
         
             
