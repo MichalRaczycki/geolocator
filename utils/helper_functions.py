@@ -42,7 +42,32 @@ def dijkstra_algorithm(graph, start_node):
         unvisited_nodes.remove(current_min_node)
     return previous_nodes,shortest_path
 
+def print_result(previous_nodes,shortest_path,start_node,target_node):
+    path = []
+    node = target_node
+    
+    while node != start_node:
+        path.append(node)
+        node = previous_nodes[node]
+        
+    path.append(start_node)
+    
+    print(f"Found the following best path with a value of {shortest_path[target_node]}")
+    path_description = ''
+    for index in reversed(range(len(path))):
+        path_description+= f'{path[index]}->'
+    path_description+= 'goal achieved'
+    print(path_description)
+    return None
+    
+    
 def find_key_by_value(distances, value):
     for x in distances:
         if distances[x] == value:
             return x
+        
+def delete_point_from_list(to_visit, value):
+    for (index, item) in enumerate(to_visit):
+        if item == value:
+            to_visit.pop(index)
+    return to_visit
