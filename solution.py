@@ -18,7 +18,7 @@ coordinate_dict[0] = (12.922963500022886, 52.42706852497485)
 for x in sorted(raw_point_coords.items(),key = lambda x :x[0]):
     coordinate_dict[x[0]]=x[1]
 
-print(coordinate_dict)
+#print(coordinate_dict)
 
 distance_dict={}
 for current_point in range(0,len(coordinate_dict.items())):
