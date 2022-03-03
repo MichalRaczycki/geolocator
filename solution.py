@@ -9,6 +9,7 @@ def print_distances(distance_dict):
     
 locations = open('data.json')
 data = json.load(locations)
+print(data)
 raw_point_coords ={}
 for i in data['features']:
     raw_point_coords[i['properties']['point-id']] = tuple(i['geometry']['coordinates'])
